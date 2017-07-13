@@ -1,0 +1,1 @@
+setterm -blenght 0
