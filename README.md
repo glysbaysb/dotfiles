@@ -14,3 +14,6 @@ git
 bash
 ----
 
+mutt
+----
+only the web.de mail address
