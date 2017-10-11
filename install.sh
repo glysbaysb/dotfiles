@@ -14,7 +14,17 @@ cd $dir
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
 for file in $files; do
+	# todo: create folders, if they don't exist
 	echo "Install $file"
     mv ~/.$file ~/dotfiles_old/
     ln -s $dir/$file ~/.$file
 done
+
+# vim plugins
+mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+plugins="git://github.com/altercation/vim-colors-solarized.git https://github.com/scrooloose/nerdtree.git git clone git://github.com/altercation/vim-colors-solarized.git https://github.com/tpope/vim-fugitive.git"
+cd ~/.vim/bundle
+for plugin in $plugins; do
+	git clone $plugin
+done
+cd -
