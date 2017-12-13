@@ -1,4 +1,5 @@
 startup_message off
+defscrollback 30000
 
 # window title
 backtick 1 5 5 true
@@ -8,6 +9,8 @@ caption string "%{= kw}%Y-%m-%d;%c %{= kw}%-Lw%{= kG}%{+b}[%n %t]%{-b}%{= kw}%+L
 caption always
 
 # informative statusbar
+hardstatus alwayslastline 
+hardstatus string '%{= Kd} %{= Kd}%-w%{= Kr}[%{= KW}%n %t%{= Kr}]%{= Kd}%+w %-= %{KG} %H%{KW}|%{KY}%101`%{KW}|%D %M %d %Y%{= Kc} %C%A%{-}'
 
 # use x scrolling
 termcapinfo xterm|xterms|xs|rxvt|putty ti@:te@
