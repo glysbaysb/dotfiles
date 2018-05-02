@@ -22,9 +22,6 @@ set hls
 " Wrap text instead of being on one line
 set lbr
 
-" Change colorscheme from default to delek
-colorscheme delek
-
 if has("multi_byte")
   if &termencoding == ""
     let &termencoding = &encoding
@@ -42,7 +39,6 @@ cmap w!! w !sudo tee > /dev/null %
 execute pathogen#infect()
 
 " NERDTree
-map <C-t> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -53,4 +49,15 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 syntax enable
 set background=dark
 let g:solarized_termcolors=256
-"colorscheme solarized
+colorscheme solarized
+
+" bindings
+map <F1> :NERDTreeFocus<CR>
+map <F2> :NERDTreeToggle<CR>
+map <F3> :TagbarToggle<CR>
+map <F4> :make<CR>
+map <F5> :split<CR>
+map <F6> :vsplit<CR>
+map <F7> :tabprev<CR>
+map <F8> :tabnext<CR>
+
