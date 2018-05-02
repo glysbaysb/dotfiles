@@ -5,7 +5,7 @@
 oldir=`pwd`
 dir=~/dotfiles                    # dotfiles directory
 backupdir=~/dotfiles_old             # old dotfiles backup directory
-files="gitconfig vimrc bashrc bash_profile config/htop/htoprc muttrc mutt/webde"     # list of files/folders to symlink in homedir
+files="gitconfig vimrc bashrc bash_profile config/htop/htoprc muttrc mutt/webde screenrc" # list of files/folders to symlink in homedir
 
 # create dotfiles_old in homedir
 mkdir -p $backupdir
@@ -23,7 +23,7 @@ done
 
 # vim plugins
 mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-plugins="git://github.com/altercation/vim-colors-solarized.git https://github.com/scrooloose/nerdtree.git git://github.com/altercation/vim-colors-solarized.git https://github.com/tpope/vim-fugitive.git"
+plugins="git://github.com/altercation/vim-colors-solarized.git https://github.com/scrooloose/nerdtree.git git://github.com/altercation/vim-colors-solarized.git https://github.com/tpope/vim-fugitive.git git clone https://github.com/majutsushi/tagbar"
 cd ~/.vim/bundle
 for plugin in $plugins; do
 	git clone $plugin
