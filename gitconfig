@@ -5,3 +5,5 @@
 	email = gm.ijewski@web.de
 [core]
 	editor = vim
+[alias]
+	tree = log --decorate --graph --all
