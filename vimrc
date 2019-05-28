@@ -47,10 +47,9 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 
 " Solarized
 syntax enable
-set background=dark
+set background=light
 "set t_Co=16
-set term=xterm-256-color
-let g:solarized_termcolors=16
+let g:solarized_termcolors=256
 colorscheme solarized
 
 " bindings
