@@ -2,7 +2,6 @@ set softtabstop=4
 set tabstop=4
 set shiftwidth=4
 
-"set mouse=a
 " Turn on line numbering. Turn it off with "set nonu"
 set nu
 
@@ -66,3 +65,6 @@ map <F10> <C-W><C-j>
 map <F11> <C-W><C-k>
 map <F12> <C-W><C-l>
 
+" Don't litter swp files everywhere
+set backupdir=~/.cache
+set directory=~/.cache
