@@ -66,3 +66,7 @@ map <F10> <C-W><C-j>
 map <F11> <C-W><C-k>
 map <F12> <C-W><C-l>
 
+" remap <ESC>
+au VimEnter * silent!xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+au VimLeave * silent!xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
+
