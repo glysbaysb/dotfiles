@@ -1,6 +1,0 @@
-set hostname="web.de"
-set imap_login="gm.ijewski"
-set folder="imap://gm.ijewski@imap.web.de/"         #Mailbox, die aufgerufen wird
-set postponed="=Entwurf"      #Verzeichnis, in dem die Entwürfe abgelegt werden. Das = ist eine Abkürzung für den Inhalt von folder
-set record="=Gesendet"        #Verzeichnis für die versendeten Mails  
-set spoolfile="=INBOX"        #Verzeichnis, das zu Beginn aufgerufen 

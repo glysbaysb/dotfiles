@@ -2,7 +2,6 @@ set softtabstop=4
 set tabstop=4
 set shiftwidth=4
 
-"set mouse=a
 " Turn on line numbering. Turn it off with "set nonu"
 set nu
 
@@ -70,3 +69,6 @@ map <F12> <C-W><C-l>
 au VimEnter * silent!xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 au VimLeave * silent!xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 
+" Don't litter swp files everywhere
+set backupdir=~/.cache
+set directory=~/.cache

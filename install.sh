@@ -5,7 +5,7 @@
 oldir=`pwd`
 dir=~/dotfiles                    # dotfiles directory
 backupdir=~/dotfiles_old             # old dotfiles backup directory
-files="gitconfig vimrc bashrc bash_profile config/htop/htoprc muttrc mutt/webde screenrc" # list of files/folders to symlink in homedir
+files="vimrc bashrc bash_profile config/htop/htoprc screenrc" # list of files/folders to symlink in homedir
 
 # create dotfiles_old in homedir
 mkdir -p $backupdir
@@ -29,3 +29,6 @@ for plugin in $plugins; do
 	git clone $plugin
 done
 cd $olddir
+
+echo bitte selbst entscheiden ob Arbeits oder persoenlich ist
+echo Und dann gitconfig selbst verlinken
