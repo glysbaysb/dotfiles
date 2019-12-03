@@ -59,8 +59,8 @@ map <F3> :TagbarToggle<CR>
 map <F4> :make<CR>
 map <F5> :split<CR>
 map <F6> :vsplit<CR>
-"map <F7> :tabprev<CR>
-"map <F8> :tabnext<CR>
+map <F7> :tabprev<CR>
+map <F8> :tabnext<CR>
 map <F9> <C-W><C-H>
 map <F10> <C-W><C-j>
 map <F11> <C-W><C-k>
