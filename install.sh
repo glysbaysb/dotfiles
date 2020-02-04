@@ -5,7 +5,7 @@
 oldir=`pwd`
 dir=~/dotfiles                    # dotfiles directory
 backupdir=~/dotfiles_old             # old dotfiles backup directory
-files="vimrc bashrc bash_profile config/htop/htoprc screenrc" # list of files/folders to symlink in homedir
+files="vimrc bashrc bash_profile config/htop/htoprc screenrc tool-versions" # list of files/folders to symlink in homedir
 
 # change to the dotfiles directory
 cd $dir
