@@ -25,5 +25,7 @@ for plugin in $plugins; do
 done
 cd $olddir
 
-echo bitte selbst entscheiden ob Arbeits oder persoenlich ist
-echo Und dann gitconfig selbst verlinken
+echo "arbeits rechner (0) oder persoenlicher recher (1): "
+read type
+if [[ $type == 0 ]]; then ln -s $dir/gitconfig.work ~/.gitconfig; fi
+if [[ $type == 1 ]]; then ln -s $dir/gitconfig.personal ~/.gitconfig; fi
