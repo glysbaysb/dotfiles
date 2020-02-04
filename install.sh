@@ -7,17 +7,12 @@ dir=~/dotfiles                    # dotfiles directory
 backupdir=~/dotfiles_old             # old dotfiles backup directory
 files="vimrc bashrc bash_profile config/htop/htoprc screenrc" # list of files/folders to symlink in homedir
 
-# create dotfiles_old in homedir
-mkdir -p $backupdir
-
 # change to the dotfiles directory
 cd $dir
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
 for file in $files; do
-	# todo: create folders, if they don't exist
 	echo "Install $file"
-    mv ~/.$file $backupdir
     ln -s $dir/$file ~/.$file
 done
 
