@@ -44,12 +44,6 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
-" Solarized
-syntax enable
-set background=light
-"set t_Co=16
-let g:solarized_termcolors=256
-colorscheme solarized
 
 " bindings
 map <F1> :NERDTreeFocus<CR>

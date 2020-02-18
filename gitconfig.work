@@ -4,7 +4,7 @@
 	name = "Geert Ijewski"
 	email = geert.ijewski@pat-adams.de
 [core]
-	editor = vim
+	editor = nvim
 	autocrlf = input
 [alias]
 	tree = log --decorate --graph --all
