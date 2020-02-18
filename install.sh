@@ -5,7 +5,7 @@
 oldir=`pwd`
 dir=~/dotfiles                    # dotfiles directory
 backupdir=~/dotfiles_old             # old dotfiles backup directory
-files="vimrc bashrc bash_profile config/htop/htoprc screenrc tool-versions" # list of files/folders to symlink in homedir
+files="vimrc bashrc bash_profile config/htop/htoprc config/aerc screenrc tool-versions" # list of files/folders to symlink in homedir
 
 # change to the dotfiles directory
 cd $dir
@@ -27,5 +27,10 @@ cd $olddir
 
 echo "arbeits rechner (0) oder persoenlicher recher (1): "
 read type
-if [[ $type == 0 ]]; then ln -s $dir/gitconfig.work ~/.gitconfig; fi
-if [[ $type == 1 ]]; then ln -s $dir/gitconfig.personal ~/.gitconfig; fi
+if [[ $type == 0 ]]; then
+	ln -s $dir/gitconfig.work ~/.gitconfig;
+	ln -s $dir/config/aerc/accounts-work.conf ~/.config/aerc/accounts.conf;
+fi
+if [[ $type == 1 ]]; then
+	ln -s $dir/gitconfig.personal ~/.gitconfig;
+fi
