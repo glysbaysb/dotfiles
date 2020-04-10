@@ -34,9 +34,6 @@ endif
 " Allow saving files as sudo
 cmap w!! w !sudo tee > /dev/null %
 
-"pathogen
-execute pathogen#infect()
-
 " NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd StdinReadPre * let s:std_in=1

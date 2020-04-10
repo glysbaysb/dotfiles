@@ -17,9 +17,9 @@ for file in $files; do
 done
 
 # vim plugins
-mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-plugins="git://github.com/altercation/vim-colors-solarized.git https://github.com/scrooloose/nerdtree.git git://github.com/altercation/vim-colors-solarized.git https://github.com/tpope/vim-fugitive.git git clone https://github.com/majutsushi/tagbar https://github.com/sgur/vim-editorconfig.git"
-cd ~/.vim/bundle
+mkdir -p ~/.vim/pack/site/start
+plugins="git://github.com/altercation/vim-colors-solarized.git https://github.com/scrooloose/nerdtree.git git://github.com/altercation/vim-colors-solarized.git https://github.com/tpope/vim-fugitive.git https://github.com/majutsushi/tagbar https://github.com/sgur/vim-editorconfig.git"
+cd ~/.vim/pack/site/start
 for plugin in $plugins; do
 	git clone $plugin
 done
