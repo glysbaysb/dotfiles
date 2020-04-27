@@ -1,6 +1,7 @@
 python pypy3.6-7.3.0
 neovim 0.4.3
-gradle 6.1.1
+gradle 6.3
 nodejs 13.7.0
-yarn 1.21.1
+yarn 1.22.4
 java adopt-openjdk-8u242-b08
+docker-compose v1.25.2
