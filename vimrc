@@ -63,3 +63,6 @@ au VimLeave * silent!xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 " Don't litter swp files everywhere
 set backupdir=~/.cache
 set directory=~/.cache
+
+" file specific settings
+autocmd FileType python setlocal expandtab
