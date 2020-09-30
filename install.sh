@@ -5,7 +5,7 @@
 oldir=`pwd`
 dir=~/dotfiles                    # dotfiles directory
 backupdir=~/dotfiles_old             # old dotfiles backup directory
-files="vimrc bashrc bash_profile config/htop/htoprc config/aerc screenrc tool-versions" # list of files/folders to symlink in homedir
+files="vimrc bashrc bash_profile config/htop/htoprc config/aerc screenrc tool-versions tmux.conf" # list of files/folders to symlink in homedir
 
 # change to the dotfiles directory
 cd $dir
