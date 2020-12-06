@@ -9,7 +9,7 @@ files="vimrc bashrc bash_profile config/htop/htoprc config/aerc screenrc tool-ve
 # change to the dotfiles directory
 cd $dir
 
-# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
+# create symlinks 
 for file in $files; do
 	echo "Install $file"
     ln -s $dir/$file ~/.$file
@@ -22,8 +22,8 @@ cd ~/.vim/pack/site/start
 for plugin in $plugins; do
 	git clone $plugin
 done
-cd $olddir
 
+# aerc
 echo "arbeits rechner (0) oder persoenlicher recher (1): "
 read type
 if [[ $type == 0 ]]; then
@@ -33,3 +33,7 @@ fi
 if [[ $type == 1 ]]; then
 	ln -s $dir/gitconfig.personal ~/.gitconfig;
 fi
+
+#change back
+cd $olddir
+
