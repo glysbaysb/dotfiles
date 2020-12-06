@@ -17,7 +17,7 @@ done
 
 # vim plugins
 mkdir -p ~/.vim/pack/site/start
-plugins="git://github.com/altercation/vim-colors-solarized.git https://github.com/scrooloose/nerdtree.git git://github.com/altercation/vim-colors-solarized.git https://github.com/tpope/vim-fugitive.git https://github.com/majutsushi/tagbar https://github.com/sgur/vim-editorconfig.git"
+plugins="git://github.com/altercation/vim-colors-solarized.git https://github.com/scrooloose/nerdtree.git git://github.com/altercation/vim-colors-solarized.git https://github.com/tpope/vim-fugitive.git https://github.com/majutsushi/tagbar https://github.com/sgur/vim-editorconfig.git https://github.com/vlime/vlime.git"
 cd ~/.vim/pack/site/start
 for plugin in $plugins; do
 	git clone $plugin

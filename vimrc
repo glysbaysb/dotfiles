@@ -66,3 +66,7 @@ set directory=~/.cache
 
 " file specific settings
 autocmd FileType python setlocal expandtab
+
+" Vlime
+set runtimepath^=~/.vim/pack/site/start/vlime/vim
+filetype plugin on
