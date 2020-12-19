@@ -11,9 +11,12 @@ Installed plugins:
 git
 ---
 
-bash
+fish
 ----
 
-mutt
-----
-only the web.de mail address
+window manager
+--------------
+trying out swaywm with:
+- [mako](https://github.com/emersion/mako)
+- [wofi](https://hg.sr.ht/~scoopta/wofi)
+
