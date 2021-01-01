@@ -111,6 +111,7 @@ output HDMI-A-1 resolution 1920x1080 position 1680,0
 #
 # Layout stuff:
 #
+	gaps inner 3
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
@@ -191,9 +192,15 @@ bar {
 
 include /etc/sway/config.d/*
 
+#
 # various others
+#
 	# notifications
 	exec mako
 
-	# shotman
-	bindsym Print exec shotman active
+	# grimshot
+	# requires https://github.com/emersion/grim
+	# slurp
+	set $grimshot ~/code/tools/grimshot
+	bindsym Print exec $grimshot --notify save screen
+	bindsym Ctrl+Print exec $grimshot --notify save area
