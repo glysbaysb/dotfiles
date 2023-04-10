@@ -9,3 +9,5 @@
 	tree = log --decorate --graph --all
 	cc = !git log --format=format: --name-only | egrep -v '^$' | sort | uniq -c | sort -rg | head -10
 
+[init]
+	defaultBranch = develop
