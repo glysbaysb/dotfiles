@@ -70,3 +70,6 @@ autocmd FileType python setlocal expandtab
 " Vlime
 set runtimepath^=~/.vim/pack/site/start/vlime/vim
 filetype plugin on
+
+" python
+autocmd BufEnter *.py set ai sw=4 ts=4 sta et fo=croql
