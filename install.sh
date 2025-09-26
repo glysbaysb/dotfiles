@@ -4,7 +4,7 @@
 
 oldir=`pwd`
 dir=~/dotfiles                    # dotfiles directory
-files="vimrc bashrc bash_profile config/htop/htoprc config/aerc screenrc tool-versions tmux.conf config/kitty" # list of files/folders to symlink in homedir
+files="vimrc bashrc bash_profile config/htop/htoprc screenrc tool-versions tmux.conf config/kitty" # list of files/folders to symlink in homedir
 
 # change to the dotfiles directory
 cd $dir
@@ -17,22 +17,13 @@ done
 
 # vim plugins
 mkdir -p ~/.vim/pack/site/start
-plugins="git://github.com/altercation/vim-colors-solarized.git https://github.com/scrooloose/nerdtree.git git://github.com/altercation/vim-colors-solarized.git https://github.com/tpope/vim-fugitive.git https://github.com/majutsushi/tagbar https://github.com/sgur/vim-editorconfig.git https://github.com/vlime/vlime.git"
+plugins="https://github.com/scrooloose/nerdtree.git git://github.com/altercation/vim-colors-solarized.git https://github.com/tpope/vim-fugitive.git https://github.com/majutsushi/tagbar https://github.com/sgur/vim-editorconfig.git https://github.com/vlime/vlime.git"
 cd ~/.vim/pack/site/start
 for plugin in $plugins; do
 	git clone $plugin
 done
 
-# aerc
-echo "arbeits rechner (0) oder persoenlicher recher (1): "
-read type
-if [[ $type == 0 ]]; then
-	ln -s $dir/gitconfig.work ~/.gitconfig;
-	ln -s $dir/config/aerc/accounts-work.conf ~/.config/aerc/accounts.conf;
-fi
-if [[ $type == 1 ]]; then
-	ln -s $dir/gitconfig.personal ~/.gitconfig;
-fi
+ln -s $dir/gitconfig.personal ~/.gitconfig;
 
 #change back
 cd $olddir
